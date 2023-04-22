@@ -3,19 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - whatIsPlayer
   - Water
   - UI
+  - Door1
+  - Door2
   - 
   - 
-  - 
-  - 
-  - 
+  - whatIsGround
   - 
   - 
   - 
