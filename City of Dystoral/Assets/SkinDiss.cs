@@ -5,12 +5,19 @@ using UnityEngine;
 public class SkinDiss : MonoBehaviour
 {
     private bool collided = false;
+    public GameObject Winds;
 
-    void OnCollisionEnter(Collision other)
+private void Start()
     {
-        if (other.collider.CompareTag("Player"))
+       Winds.gameObject.SetActive(false);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
             collided = true;
+            Destroy(gameObject, 2f);
         }
     }
 
@@ -18,8 +25,7 @@ public class SkinDiss : MonoBehaviour
     {
         if (collided)
         {
-            // Wait for 3 seconds before destroying the game object
-            Destroy(gameObject, 3f);
+            Winds.gameObject.SetActive(true);
         }
     }
 }
